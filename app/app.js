@@ -13,6 +13,16 @@ import 'babel-polyfill';
 import 'file?name=[name].[ext]!./favicon.ico';
 import '!file?name=[name].[ext]!./manifest.json';
 import 'file?name=[name].[ext]!./.htaccess';
+import '!!style-loader!css-loader!./assets/css/bootstrap.min.css';
+import '!!style-loader!css-loader!./assets/css/mdb.min.css';
+import '!!style-loader!css-loader!./assets/font/style.css';
+import '!!style-loader!css-loader!./assets/css/style2.css';
+import '!!style-loader!css-loader!./assets/css/style.css';
+import '!!style-loader!css-loader!./assets/plugins/bxslider/jquery.bxslider.css';
+import '!!style-loader!css-loader!./assets/plugins/select2/dist/css/select2.min.css';
+import '!!style-loader!css-loader!./assets/plugins/dropzone/dist/min/dropzone.min.css';
+import '!!style-loader!css-loader!./assets/plugins/bootstrap-slider/dist/css/bootstrap-slider.min.css';
+
 /* eslint-enable import/no-unresolved, import/extensions */
 
 // Import all the third party stuff
