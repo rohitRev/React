@@ -97,7 +97,7 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
                   </ul>
 
                   <img
-                    src="img/footer-logo.png"
+                    src="/public/img/footer-logo.png"
                     className="footer-g-logo"
                     alt="#" />
 
@@ -123,7 +123,7 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
 
                       <a href="#">
 
-                        <img src="img/fb-icon.png" alt="#" />
+                        <img src="/public/img/fb-icon.png" alt="#" />
 
                       </a>
 
@@ -133,7 +133,7 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
 
                       <a href="#">
 
-                        <img src="img/tw-icon.png" alt />
+                        <img src="/public/img/tw-icon.png" alt />
 
                       </a>
 
@@ -143,7 +143,7 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
 
                       <a href="#">
 
-                        <img src="img/g-plus-icon.png" alt />
+                        <img src="/public/img/g-plus-icon.png" alt />
 
                       </a>
 
@@ -153,7 +153,7 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
 
                       <a href="#">
 
-                        <img src="img/pin-icon.png" alt />
+                        <img src="/public/img/pin-icon.png" alt />
 
                       </a>
 
@@ -163,7 +163,7 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
 
                       <a href="#">
 
-                        <img src="img/blog-icon.png" alt />
+                        <img src="/public/img/blog-icon.png" alt />
 
                       </a>
 
@@ -173,7 +173,7 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
 
                       <a href="#">
 
-                        <img src="img/yt-icon.png" alt />
+                        <img src="/public/img/yt-icon.png" alt />
 
                       </a>
 
@@ -183,7 +183,7 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
 
                       <a href="#">
 
-                        <img src="img/rss-icon.png" alt />
+                        <img src="/public/img/rss-icon.png" alt />
 
                       </a>
 
@@ -193,7 +193,7 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
 
                       <a href="#">
 
-                        <img src="img/lk-icon.png" alt />
+                        <img src="/public/img/lk-icon.png" alt />
 
                       </a>
 
@@ -244,43 +244,43 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
 
                     <li>
 
-                      <img src="img/Visa.png" alt="#" />
+                      <img src="/public/img/Visa.png" alt="#" />
 
                     </li>
 
                     <li>
 
-                      <img src="img/PayPal.png" alt="#" />
+                      <img src="/public/img/PayPal.png" alt="#" />
 
                     </li>
 
                     <li>
 
-                      <img src="img/Mastercard.png" alt="#" />
+                      <img src="/public/img/Mastercard.png" alt="#" />
 
                     </li>
 
                     <li>
 
-                      <img src="img/JCB.png" alt="#" />
+                      <img src="/public/img/JCB.png" alt="#" />
 
                     </li>
 
                     <li>
 
-                      <img src="img/Discover-Network.png" alt="#" />
+                      <img src="/public/img/Discover-Network.png" alt="#" />
 
                     </li>
 
                     <li>
 
-                      <img src="img/American-Express.png" alt="#" />
+                      <img src="/public/img/American-Express.png" alt="#" />
 
                     </li>
 
                     <li>
 
-                      <img src="img/Maestro.png" alt="#" />
+                      <img src="/public/img/Maestro.png" alt="#" />
 
                     </li>
 

@@ -174,7 +174,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                     <a href="#">
 
                       <img
-                        src="img/logo.png"
+                        src="/public/img/logo.png"
                         className="img-fluid logo"
                         alt />
 
@@ -212,7 +212,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
 
                     <a href="#" className="cart-icon">
 
-                      <img src="img/cart.svg" alt />
+                      <img src="/public/img/cart.svg" alt />
 
                       <span className="hidden-sm-down">cart</span>
 
@@ -247,7 +247,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                     data-slide-menu="#menu-mobile"
                     className="icon-off-canvas hidden-md-up">
 
-                    <img src="img/left-arrow-icon.png" alt="left" />
+                    <img src="/public/img/left-arrow-icon.png" alt="left" />
 
                   </a>
 
@@ -293,7 +293,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                 data-slide-menu="#menu-mobile"
                 className="icon-off-canvas hidden-md-up">
 
-                <img src="img/left-arrow-icon.png" alt="left" />
+                <img src="/public/img/left-arrow-icon.png" alt="left" />
 
               </a>
 
@@ -307,7 +307,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
 
                   <i className="fa-li text-xs-center">
 
-                    <img src="img/us-flag.png" alt />
+                    <img src="/public/img/us-flag.png" alt />
 
                   </i> English US <i
                   className="fa fa-angle-right fa-fixed-right"
@@ -318,27 +318,27 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
 
                 <a className="dropdown-item" href="#">
 
-                  <img src="img/us-flag.png" alt /> English US
+                  <img src="/public/img/us-flag.png" alt /> English US
                   </a>
 
                   <a className="dropdown-item active" href="#">
 
-                    <img src="img/us-flag.png" alt /> English US <i className="fa fa-check" />
+                    <img src="/public/img/us-flag.png" alt /> English US <i className="fa fa-check" />
                   </a>
 
                   <a className="dropdown-item" href="#">
 
-                    <img src="img/us-flag.png" alt /> English US
+                    <img src="/public/img/us-flag.png" alt /> English US
                     </a>
 
                     <a className="dropdown-item" href="#">
 
-                      <img src="img/us-flag.png" alt /> English US
+                      <img src="/public/img/us-flag.png" alt /> English US
                       </a>
 
                       <a className="dropdown-item" href="#">
 
-                        <img src="img/us-flag.png" alt /> English US
+                        <img src="/public/img/us-flag.png" alt /> English US
                         </a>
 
                       </div>
@@ -449,7 +449,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                           <a href="#">
 
                             <img
-                              src="img/logo.svg"
+                              src="/public/img/logo.svg"
                               className="img-fluid logo hidden-xs-up"
                               alt />
 
@@ -549,7 +549,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                       <a href="#">
 
                         <img
-                          src="img/logo.png"
+                          src="/public/img/logo.png"
                           className="img-fluid flex-center" />
 
                       </a>
