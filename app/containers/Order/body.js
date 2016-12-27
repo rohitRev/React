@@ -77,12 +77,14 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
                 <label className="col-xs-3 col-form-label text-xs-right">Sizes:</label>
                 <div className="col-xs-9">
                   <div className="small-custom-select">
-                    <div className="select-wrapper mdb-select small-input"><span className="caret">▼</span><input className="select-dropdown" readOnly="true" data-activates="select-options-3336212c-f145-1ed3-ac8c-51c6f0f60b1e" defaultValue="Inch" type="text" /><ul id="select-options-3336212c-f145-1ed3-ac8c-51c6f0f60b1e" className="dropdown-content select-dropdown "><li className><span>Inch</span></li><li className><span>Pixel</span></li><li className><span>Inch</span></li><li className><span>Pixel</span></li></ul><select className="mdb-select small-input initialized">
-                        <option value={1}>Inch</option>
-                        <option value={2}>Pixel</option>
-                        <option value={1}>Inch</option>
-                        <option value={2}>Pixel</option>
-                      </select></div>
+                    <div className="select-wrapper mdb-select small-input">
+                      <select className="mdb-select small-input initialized">
+                          <option value={1}>Inch</option>
+                          <option value={2}>Pixel</option>
+                          <option value={1}>Inch</option>
+                          <option value={2}>Pixel</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
               </div>
