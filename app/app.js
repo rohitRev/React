@@ -24,7 +24,8 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import FontFaceObserver from 'fontfaceobserver';
 import { useScroll } from 'react-router-scroll';
 import configureStore from './store';
-
+var injectTapEventPlugin = require("react-tap-event-plugin");
+injectTapEventPlugin();
 // Import Language Provider
 import LanguageProvider from 'containers/LanguageProvider';
 
