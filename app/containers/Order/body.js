@@ -1,12 +1,6 @@
-/*
- *
- * Order
- *
- */
-
 import React from 'react';
 import { connect } from 'react-redux';
-
+import PopUpEditorContent from './Popup/Editor';
 
 
 export class OrderBody extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -14,6 +8,7 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
     return (
 <div className="order-page-bg">
         <div className="container container-sm">
+          <PopUpEditorContent />
           <div className="order-page-block">
             <h1 className="order-heading text-xs-center">New Custom Embroidery Digitizing Order Form</h1>
             <div className="order-form-slider upload-block-parent">
