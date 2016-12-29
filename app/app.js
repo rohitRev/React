@@ -7,7 +7,7 @@
 
 // Needed for redux-saga es6 generator support
 import 'babel-polyfill';
-
+import injectTapEventPlugin from 'react-tap-event-plugin';
 /* eslint-disable import/no-unresolved, import/extensions */
 // Load the favicon, the manifest.json file and the .htaccess file
 import 'file?name=[name].[ext]!./favicon.ico';
@@ -62,6 +62,9 @@ const history = syncHistoryWithStore(browserHistory, store, {
   selectLocationState: selectLocationState(),
 });
 
+/*-------Temprarily added code for material-ui -------*/
+injectTapEventPlugin();
+/*-------Temprarily added code for material-ui -------*/
 // Set up the router, wrapping all Routes in the App component
 import App from 'containers/App';
 import createRoutes from './routes';
