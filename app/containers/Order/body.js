@@ -6,7 +6,6 @@ import Editor from '../../components/Editor/index';
 export class OrderBody extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-
       <div className="order-page-bg">
         <Editor />
         <div className="container container-sm">
@@ -14,10 +13,14 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
             <h1 className="order-heading text-xs-center">New Custom Embroidery Digitizing Order Form</h1>
             <div className="order-form-slider upload-block-parent">
               <form action="" className="order-upload-block ">
-                <div className="file-attachment" data-toggle="modal" data-target="#attachment-pop-up">
-                  <div>
-                    <i className="fa fa-paperclip" aria-hidden="true"></i>
-                    <span>Add Attachment</span>
+                <div className="file-attachment">
+                  <div className>
+                    <a className="nav-link dropdown-toggle waves-effect waves-light" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i className="fa fa-paperclip" aria-hidden="true" />Add Attachment</a>
+                    <div className="dropdown-menu dropdown-default for-attachment-only" aria-labelledby="dropdownMenu2" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                      <a className="dropdown-item waves-effect waves-light" href="#"><i className="fa fa-hdd-o" aria-hidden="true" />Upload by drive</a>
+                      <a className="dropdown-item waves-effect waves-light" href="#"><i className="fa fa-server" aria-hidden="true" />Upload by library</a>
+                      <a className="dropdown-item waves-effect waves-light" href="#"><i className="fa fa-stop" aria-hidden="true" />Add whiteboard</a>
+                    </div>
                   </div>
                 </div>
                 <a href="/order" className="list-link">List of formats we accept</a>
@@ -371,13 +374,12 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
                   </div>
                 </div>
               </div>
-
             </form>
           </div>
         </div>
       </div>
 
-      );
+    );
   }
 }
 

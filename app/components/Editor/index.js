@@ -23,7 +23,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
 
   handleClose = () => {
     this.setState({open: false});
-  };  
+  };
   render() {
     const actions = [
       <FlatButton
@@ -37,7 +37,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
         disabled={true}
         onTouchTap={this.handleClose}
       />,
-    ];    
+    ];
     return (
       <MuiThemeProvider>
         <div>
@@ -122,22 +122,22 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                               </div>
                               <div className="pop-hover-color crop-tools">
                                 <div className="common-div-s active">
-                                  <a href="/order"><img src="img/line-left.png" /></a>
+                                  <a href="/order"><img src="img/line-left.png" alt="" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="/order"><img src="img/box-line.png" /></a>
+                                  <a href="/order"><img src="img/box-line.png" alt="" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="/order"><img src="img/rectangle.png" /></a>
+                                  <a href="/order"><img src="img/rectangle.png" alt="" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="/order"><img src="img/circle.png" /></a>
+                                  <a href="/order"><img src="img/circle.png" alt="" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="/order"><img src="img/line-icon.png" /></a>
+                                  <a href="/order"><img src="img/line-icon.png" alt="" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="/order"><img src="img/pen-icon.png" /></a>
+                                  <a href="/order"><img src="img/pen-icon.png" alt="" /></a>
                                 </div>
                               </div>
                             </li>
@@ -419,15 +419,15 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                             </div>
                             <div className="img-repeat-sec">
                               <ul>
-                                <li><a href="/order"><img src="img/kim.jpg" /></a></li>
-                                <li><a href="/order"><img src="img/second-image.png" /></a></li>
-                                <li><a href="/order"><img src="img/third-image.png" /></a></li>
-                                <li><a href="/order"><img src="img/fifth-image.png" /></a></li>
-                                <li><a href="/order"><img src="img/fifth-image.png" /></a></li>
-                                <li><a href="/order"><img src="img/fifth-image.png" /></a></li>
-                                <li><a href="/order"><img src="img/fifth-image.png" /></a></li>
-                                <li><a href="/order"><img src="img/fifth-image.png" /></a></li>
-                                <li><a href="/order"><img src="img/fifth-image.png" /></a></li>
+                                <li><a href="/order"><img src="img/kim.jpg"  alt=""/></a></li>
+                                <li><a href="/order"><img src="img/second-image.png" alt=""/></a></li>
+                                <li><a href="/order"><img src="img/third-image.png" alt="" /></a></li>
+                                <li><a href="/order"><img src="img/fifth-image.png" alt="" /></a></li>
+                                <li><a href="/order"><img src="img/fifth-image.png" alt="" /></a></li>
+                                <li><a href="/order"><img src="img/fifth-image.png" alt="" /></a></li>
+                                <li><a href="/order"><img src="img/fifth-image.png" alt="" /></a></li>
+                                <li><a href="/order"><img src="img/fifth-image.png" alt="" /></a></li>
+                                <li><a href="/order"><img src="img/fifth-image.png" alt="" /></a></li>
                               </ul>
                               <div className="bottom-arrow-fun">
                                 <a href="/order"><i className="fa fa-caret-down" aria-hidden="true" /></a>

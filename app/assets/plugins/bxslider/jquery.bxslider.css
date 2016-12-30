@@ -194,6 +194,27 @@
 	background: rgba(80, 80, 80, 0.75);
 	width: 100%;
 }
+.bx-wrapper .caption1 {
+	    position: absolute;
+    top: 44%;
+    left: 0;
+    background: #666\9;
+    background: rgba(80, 80, 80, 0.75);
+    width: 63%;
+    text-align: center;
+    right: 0%;
+    margin: 0px auto;
+}
+.bx-wrapper .caption1 a {
+	   color:white;
+}
+.bx-wrapper .caption1 a span{
+	   color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
 
 .bx-wrapper .bx-caption span {
 	color: #fff;
