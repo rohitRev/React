@@ -20,9 +20,9 @@ export class Order extends React.Component { // eslint-disable-line react/prefer
             { name: 'description', content: 'Description of Order' },
           ]}
         />
-      <Header />
+        <Header />
         <OrderBody />
-      <Footer />
+        <Footer />
       </div>
     );
   }

@@ -24,7 +24,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import FontFaceObserver from 'fontfaceobserver';
 import { useScroll } from 'react-router-scroll';
 import configureStore from './store';
-var injectTapEventPlugin = require("react-tap-event-plugin");
+const injectTapEventPlugin = require('react-tap-event-plugin');
 injectTapEventPlugin();
 // Import Language Provider
 import LanguageProvider from 'containers/LanguageProvider';
@@ -62,9 +62,7 @@ const history = syncHistoryWithStore(browserHistory, store, {
   selectLocationState: selectLocationState(),
 });
 
-/*-------Temprarily added code for material-ui -------*/
 
-/*-------Temprarily added code for material-ui -------*/
 // Set up the router, wrapping all Routes in the App component
 import App from 'containers/App';
 import createRoutes from './routes';
@@ -78,14 +76,14 @@ const render = (messages) => {
     <Provider store={store}>
       <LanguageProvider messages={messages}>
         <Router
-          history={history}
-          routes={rootRoute}
-          render={
-            // Scroll to top when going to a new page, imitating default browser
-            // behaviour
-            applyRouterMiddleware(useScroll())
-          }
-        />
+    history={history}
+    routes={rootRoute}
+    render={
+    // Scroll to top when going to a new page, imitating default browser
+    // behaviour
+    applyRouterMiddleware(useScroll())
+    }
+    />
       </LanguageProvider>
     </Provider>,
     document.getElementById('app')
@@ -106,14 +104,14 @@ if (!window.Intl) {
   (new Promise((resolve) => {
     resolve(System.import('intl'));
   }))
-  .then(() => Promise.all([
-    System.import('intl/locale-data/jsonp/en.js'),
-    System.import('intl/locale-data/jsonp/de.js'),
-  ]))
-  .then(() => render(translationMessages))
-  .catch((err) => {
-    throw err;
-  });
+    .then(() => Promise.all([
+      System.import('intl/locale-data/jsonp/en.js'),
+      System.import('intl/locale-data/jsonp/de.js'),
+    ]))
+    .then(() => render(translationMessages))
+    .catch((err) => {
+      throw err;
+    });
 } else {
   render(translationMessages);
 }
