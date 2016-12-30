@@ -56,7 +56,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                   </span>
                 </a>
               </span>
-              <button className="button-collapse navbar-toggler hidden-md-up" type="button" data-activates="slide-out"><i className="fa fa-bars" /></button> <a href="/order"><img src="img/logo.png" className="img-fluid logo" alt="" /> </a>
+              <button className="button-collapse navbar-toggler hidden-md-up" type="button" data-activates="slide-out"><i className="fa fa-bars" /></button> <a href="/order"><img src="/public/img/logo.png" className="img-fluid logo" alt="" /> </a>
             </div>
             <div className="col-sm-8 col-xs-7 position-static">
               <ul className="nav navbar-nav top-nav clearfix hidden-sm-down">
@@ -64,14 +64,14 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                   <a href="/order" className="order-btn btn waves-effect waves-light btn-warning">order    now</a>
                 </li>
                 <li className="nav-item cart-icon">
-                  <a href="/order" className="cart-icon"><img src="img/cart.svg" alt="" /> <span className="hidden-sm-down">cart</span></a>
+                  <a href="/order" className="cart-icon"><img src="/public/img/cart.svg" alt="" /> <span className="hidden-sm-down">cart</span></a>
                 </li>
               </ul>
               <div className="clearfix" />
               <div className="text-lg-center text-md-right text-xs-right mobile-links">
                 <a type="button" data-toggle="modal" data-target="#order-action" className="order-btn btn waves-effect waves-light btn-warning hidden-md-up">order now</a>
-                <a href="/order" className="cart-icon hidden-md-up"><img src="img/cart.svg" alt="" /><span className="hidden-sm-down">cart</span></a>
-                <a data-slide-menu="#menu-mobile" className="icon-off-canvas hidden-md-up"><img src="img/left-arrow-icon.png" alt="left" /></a>
+                <a href="/order" className="cart-icon hidden-md-up"><img src="/public/img/cart.svg" alt="" /><span className="hidden-sm-down">cart</span></a>
+                <a data-slide-menu="#menu-mobile" className="icon-off-canvas hidden-md-up"><img src="/public/img/left-arrow-icon.png" alt="left" /></a>
               </div>
             </div>
           </div>
@@ -86,17 +86,17 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                 <a href="/order" className="btn btn-black text-uppercase">sign up</a>
               </li>
             </ul>
-            <a data-slide-menu="#menu-mobile" className="icon-off-canvas hidden-md-up"><img src="img/left-arrow-icon.png" alt="left" /></a>
+            <a data-slide-menu="#menu-mobile" className="icon-off-canvas hidden-md-up"><img src="/public/img/left-arrow-icon.png" alt="left" /></a>
           </div>
           <ul className="list-unstyled off-canvas-menu-list fa-ul">
             <li>
-              <a href="/order" data-toggle="dropdown"><i className="fa-li text-xs-center"><img src="img/us-flag.png" alt="left" /></i> English US <i className="fa fa-angle-right fa-fixed-right" aria-hidden="true" /></a>
+              <a href="/order" data-toggle="dropdown"><i className="fa-li text-xs-center"><img src="/public/img/us-flag.png" alt="left" /></i> English US <i className="fa fa-angle-right fa-fixed-right" aria-hidden="true" /></a>
               <div className="dropdown-menu">
-                <a className="dropdown-item" href="/order"><img src="img/us-flag.png" alt="" /> English US</a>
-                <a className="dropdown-item active" href="/order"><img src="img/us-flag.png" alt="left" /> English US <i className="fa fa-check" /></a>
-                <a className="dropdown-item" href="/order"><img src="img/us-flag.png" alt="" /> English US</a>
-                <a className="dropdown-item" href="/order"><img src="img/us-flag.png" alt="" /> English US</a>
-                <a className="dropdown-item" href="/order"><img src="img/us-flag.png" alt="" /> English US</a>
+                <a className="dropdown-item" href="/order"><img src="/public/img/us-flag.png" alt="" /> English US</a>
+                <a className="dropdown-item active" href="/order"><img src="/public/img/us-flag.png" alt="left" /> English US <i className="fa fa-check" /></a>
+                <a className="dropdown-item" href="/order"><img src="/public/img/us-flag.png" alt="" /> English US</a>
+                <a className="dropdown-item" href="/order"><img src="/public/img/us-flag.png" alt="" /> English US</a>
+                <a className="dropdown-item" href="/order"><img src="/public/img/us-flag.png" alt="" /> English US</a>
               </div>
             </li>
             <li>
@@ -123,7 +123,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
           <div className="container container-sm">
             <div className="collapse off-canvas-nav navbar-toggleable-xs " id="collapseEx23">
               <div className="navbar-header">
-                <button className="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#collapseEx23"><i className="fa fa-close" /></button> <a href="/order"><img src="img/logo.svg" className="img-fluid logo hidden-xs-up" alt="" /></a>
+                <button className="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#collapseEx23"><i className="fa fa-close" /></button> <a href="/order"><img src="/public/img/logo.svg" className="img-fluid logo hidden-xs-up" alt="" /></a>
               </div>
               <ul className="nav  navbar-nav text-uppercase flex-nav">
                 <li className="nav-item active">
@@ -153,7 +153,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
         </nav>
         <ul id="slide-out" className="side-nav fixed default-side-nav hidden-md-up">
           <div className="logo-wrapper waves-light">
-            <a href="/order"><img alt="" src="img/logo.png" className="img-fluid flex-center" /></a>
+            <a href="/order"><img alt="" src="/public/img/logo.png" className="img-fluid flex-center" /></a>
           </div>
           <ul className="collapsible text-capitalize collapsible-accordion">
             <li><a href>Embroidery Digitizing</a></li>

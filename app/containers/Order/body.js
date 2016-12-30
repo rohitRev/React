@@ -35,9 +35,9 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
                     <ul className="list-inline upload-links">
                       <li className="list-inline-item"><a href="/order"><i className="fa fa-upload"></i></a></li>
                       <li className="list-inline-item"><a href="/order"><i className="fa fa-dropbox"></i></a></li>
-                      <li className="list-inline-item"><a href="/order"><img src="Embroidery%20DIGITIZER_files/g-drive.svg" alt="" /></a></li>
+                    <li className="list-inline-item"><a href="/order"><img src="/public/img/g-drive.svg" alt="" /></a></li>
                       <li className="list-inline-item"><a href="/order"><i className="fa fa-cloud-download" aria-hidden="true"></i></a></li>
-                      <li className="list-inline-item"><a href="/order"><img src="Embroidery%20DIGITIZER_files/box-logo.svg" alt="" /></a></li>
+                      <li className="list-inline-item"><a href="/order"><img src="/public/img/box-logo.svg" alt="" /></a></li>
                       <li className="list-inline-item"><a href="/order"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
                       <li className="list-inline-item"><a href="/order"><i className="fa fa-external-link" aria-hidden="true"></i></a></li>
                       <li className="list-inline-item"><a href="/order"><i className="fa fa-book" aria-hidden="true"></i></a></li>

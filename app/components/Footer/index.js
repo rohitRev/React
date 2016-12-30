@@ -36,7 +36,7 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
                   <li><i className="fa fa-li fa-fax" aria-hidden="true" /> 1-888-207-0136</li>
                   <li>24 Hours a day-7 Days a week</li>
                 </ul>
-                <img src="img/footer-logo.png" className="footer-g-logo" alt="#" />
+                <img src="/public/img/footer-logo.png" className="footer-g-logo" alt="#" />
               </div>
             </div>
           </div>
@@ -46,14 +46,14 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
             <div className="row">
               <div className="col-md-4">
                 <ul className="list-inline">
-                  <li><a href="/order"><img src="img/fb-icon.png" alt="#" /></a></li>
-                  <li><a href="/order"><img src="img/tw-icon.png" alt="#" /></a></li>
-                  <li><a href="/order"><img src="img/g-plus-icon.png" alt="#" /></a></li>
-                  <li><a href="/order"><img src="img/pin-icon.png" alt="#" /></a></li>
-                  <li><a href="/order"><img src="img/blog-icon.png" alt="#" /></a></li>
-                  <li><a href="/order"><img src="img/yt-icon.png" alt="#" /></a></li>
-                  <li><a href="/order"><img src="img/rss-icon.png" alt="#" /></a></li>
-                  <li><a href="/order"><img src="img/lk-icon.png" alt="#" /></a></li>
+                  <li><a href="/order"><img src="/public/img/fb-icon.png" alt="#" /></a></li>
+                  <li><a href="/order"><img src="/public/img/tw-icon.png" alt="#" /></a></li>
+                  <li><a href="/order"><img src="/public/img/g-plus-icon.png" alt="#" /></a></li>
+                  <li><a href="/order"><img src="/public/img/pin-icon.png" alt="#" /></a></li>
+                  <li><a href="/order"><img src="/public/img/blog-icon.png" alt="#" /></a></li>
+                  <li><a href="/order"><img src="/public/img/yt-icon.png" alt="#" /></a></li>
+                  <li><a href="/order"><img src="/public/img/rss-icon.png" alt="#" /></a></li>
+                  <li><a href="/order"><img src="/public/img/lk-icon.png" alt="#" /></a></li>
                 </ul>
               </div>
               <div className="col-md-3">
@@ -65,13 +65,13 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
               </div>
               <div className="col-md-5">
                 <ul className="list-inline text-md-right">
-                  <li><img src="img/Visa.png" alt="#" /></li>
-                  <li><img src="img/PayPal.png" alt="#" /></li>
-                  <li><img src="img/Mastercard.png" alt="#" /></li>
-                  <li><img src="img/JCB.png" alt="#" /></li>
-                  <li><img src="img/Discover-Network.png" alt="#" /></li>
-                  <li><img src="img/American-Express.png" alt="#" /></li>
-                  <li><img src="img/Maestro.png" alt="#" /></li>
+                  <li><img src="/public/img/Visa.png" alt="#" /></li>
+                  <li><img src="/public/img/PayPal.png" alt="#" /></li>
+                  <li><img src="/public/img/Mastercard.png" alt="#" /></li>
+                  <li><img src="/public/img/JCB.png" alt="#" /></li>
+                  <li><img src="/public/img/Discover-Network.png" alt="#" /></li>
+                  <li><img src="/public/img/American-Express.png" alt="#" /></li>
+                  <li><img src="/public/img/Maestro.png" alt="#" /></li>
                 </ul>
               </div>
             </div>
