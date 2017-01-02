@@ -4,10 +4,20 @@ import Editor from '../../components/Editor/index';
 
 
 export class OrderBody extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  constructor(){
+    super();
+    this.state = {
+      popState:true
+    }
+  }
+  openClick(e){
+    this.setState({popState:this.state.popState});
+  }
   render() {
     return (
       <div className="order-page-bg">
-        <Editor />
+        <Editor popState={this.state.popState}/>
+        <button onClick={this.openClick.bind(this)}>OpenPop</button>
         <div className="container container-sm">
           <div className="order-page-block">
             <h1 className="order-heading text-xs-center">New Custom Embroidery Digitizing Order Form</h1>
@@ -23,7 +33,7 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
                     </div>
                   </div>
                 </div>
-                <a href="/order" className="list-link">List of formats we accept</a>
+                <a href="javascript:void(0)" className="list-link">List of formats we accept</a>
               </form>
               <div className="slider-container upload-container hidden-sm-down">
                 <form action="/file-upload" className="dropzone dz-clickable">
@@ -33,14 +43,14 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
                     <h2>Drag n Drop</h2>
                     <h3>your Images here &amp; you can markup images too.</h3>
                     <ul className="list-inline upload-links">
-                      <li className="list-inline-item"><a href="/order"><i className="fa fa-upload"></i></a></li>
-                      <li className="list-inline-item"><a href="/order"><i className="fa fa-dropbox"></i></a></li>
-                    <li className="list-inline-item"><a href="/order"><img src="/public/img/g-drive.svg" alt="" /></a></li>
-                      <li className="list-inline-item"><a href="/order"><i className="fa fa-cloud-download" aria-hidden="true"></i></a></li>
-                      <li className="list-inline-item"><a href="/order"><img src="/public/img/box-logo.svg" alt="" /></a></li>
-                      <li className="list-inline-item"><a href="/order"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
-                      <li className="list-inline-item"><a href="/order"><i className="fa fa-external-link" aria-hidden="true"></i></a></li>
-                      <li className="list-inline-item"><a href="/order"><i className="fa fa-book" aria-hidden="true"></i></a></li>
+                      <li className="list-inline-item"><a href="javascript:void(0)"><i className="fa fa-upload"></i></a></li>
+                      <li className="list-inline-item"><a href="javascript:void(0)"><i className="fa fa-dropbox"></i></a></li>
+                    <li className="list-inline-item"><a href="javascript:void(0)"><img src="/public/img/g-drive.svg" alt="" /></a></li>
+                      <li className="list-inline-item"><a href="javascript:void(0)"><i className="fa fa-cloud-download" aria-hidden="true"></i></a></li>
+                      <li className="list-inline-item"><a href="javascript:void(0)"><img src="/public/img/box-logo.svg" alt="" /></a></li>
+                      <li className="list-inline-item"><a href="javascript:void(0)"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
+                      <li className="list-inline-item"><a href="javascript:void(0)"><i className="fa fa-external-link" aria-hidden="true"></i></a></li>
+                      <li className="list-inline-item"><a href="javascript:void(0)"><i className="fa fa-book" aria-hidden="true"></i></a></li>
                     </ul>
                   </div>
                 </form>
@@ -358,15 +368,15 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
                 <div className="col-sm-9 col-xs-12">
                   <div className="row-half row">
                     <div className="col-xs-4">
-                      <a href="/order" className="btn btn-primary btn-block waves-effect waves-light">Save For Later</a>
+                      <a href="javascript:void(0)" className="btn btn-primary btn-block waves-effect waves-light">Save For Later</a>
                       <span className="btn-tip">we will not process until you order</span>
                     </div>
                     <div className="col-xs-4">
-                      <a href="/order" className="btn btn-purple btn-block waves-effect waves-light">Get Quote</a>
+                      <a href="javascript:void(0)" className="btn btn-purple btn-block waves-effect waves-light">Get Quote</a>
                       <span className="btn-tip">If design is too much complex &amp; takes longer than 6 hours digitizing. or Get a stitch estimate &amp; price.</span>
                     </div>
                     <div className="col-xs-4">
-                      <a href="/order" className="btn btn-orange btn-block waves-effect waves-light">Add to Cart</a>
+                      <a href="javascript:void(0)" className="btn btn-orange btn-block waves-effect waves-light">Add to Cart</a>
                       <span className="btn-tip">
                         Place order right away &amp; recieve downloadable files.
                       </span>

@@ -10,6 +10,12 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+const customContentStyle = {
+  width: '60%',
+  maxWidth: 'none',
+};
+
 class Editor extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props){
     super(props);
@@ -24,6 +30,10 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
   handleClose = () => {
     this.setState({open: false});
   };
+  componentWillReceiveProps(nextProps)
+  {
+    this.handleOpen();
+  }
   render() {
     const actions = [
       <FlatButton
@@ -41,8 +51,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
     return (
       <MuiThemeProvider>
         <div>
-          <RaisedButton label="Modal Dialog" onTouchTap={this.handleOpen} />
-          <Dialog title="Dialog With Actions" actions={actions} modal={true} open={this.state.open}>
+          <Dialog contentStyle={customContentStyle} actions={actions} modal={true} open={this.state.open}>
             <div className="attachment-pop-up" id="attachment-pop-up">
               <div className="modal-dialog modal-lg" role="document">
                 <div className="modal-content">
@@ -52,7 +61,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                         <div className="top-fil-list">
                           <h4>Add Images &amp; Markup</h4>
                           <ul className="disabled">
-                            <a href="/order" className="ok-btn-a"><i className="fa fa-check" /></a>
+                            <a href="javascript:void(0)" className="ok-btn-a"><i className="fa fa-check" /></a>
                             <li>
                               <div className="filter-markup">
                                 <i className="fa fa-arrow-left" aria-hidden="true" />
@@ -74,8 +83,8 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                               </div>
                               <div className="pop-hover-color rotate-sec">
                                 <div className="common-div-s no-hover">
-                                  <a href="/order">Rotate 90o<i className="fa fa-undo" aria-hidden="true" /></a>
-                                  <a href="/order">
+                                  <a href="javascript:void(0)">Rotate 90o<i className="fa fa-undo" aria-hidden="true" /></a>
+                                  <a href="javascript:void(0)">
                                     <span>Straighten</span>
                                     <input type="range" name="straighten" className="active" />
                                     <span className="thumb active" style={{display: 'none', left: '60.5313px', height: 30, width: 30, top: '-20px', marginLeft: '-15px'}}>
@@ -90,16 +99,16 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                               </div>
                               <div className="pop-hover-color">
                                 <div className="common-div-s active">
-                                  <a href="/order" className="pink-color" />
+                                  <a href="javascript:void(0)" className="pink-color" />
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="/order" className="yellow-color" />
+                                  <a href="javascript:void(0)" className="yellow-color" />
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="/order" className="black-color" />
+                                  <a href="javascript:void(0)" className="black-color" />
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="/order" className="blue-color" />
+                                  <a href="javascript:void(0)" className="blue-color" />
                                 </div>
                               </div>
                             </li>
@@ -122,22 +131,22 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                               </div>
                               <div className="pop-hover-color crop-tools">
                                 <div className="common-div-s active">
-                                  <a href="/order"><img src="img/line-left.png" alt="" /></a>
+                                  <a href="javascript:void(0)"><img src="img/line-left.png" alt="" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="/order"><img src="img/box-line.png" alt="" /></a>
+                                  <a href="javascript:void(0)"><img src="img/box-line.png" alt="" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="/order"><img src="img/rectangle.png" alt="" /></a>
+                                  <a href="javascript:void(0)"><img src="img/rectangle.png" alt="" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="/order"><img src="img/circle.png" alt="" /></a>
+                                  <a href="javascript:void(0)"><img src="img/circle.png" alt="" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="/order"><img src="img/line-icon.png" alt="" /></a>
+                                  <a href="javascript:void(0)"><img src="img/line-icon.png" alt="" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="/order"><img src="img/pen-icon.png" alt="" /></a>
+                                  <a href="javascript:void(0)"><img src="img/pen-icon.png" alt="" /></a>
                                 </div>
                               </div>
                             </li>
@@ -165,13 +174,13 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                                     <div className="extra-link-block">
                                       <span>You can also choose it from</span>
                                       <ul className="list-inline list-click-able">
-                                        <li className="list-inline-item"><a href="/order">Arbitary links</a></li>
-                                        <li className="list-inline-item"><a href="/order">Url Screenshot</a></li>
-                                        <li className="list-inline-item"><a href="/order">Google Drive</a></li>
-                                        <li className="list-inline-item"><a href="/order">One Drive</a></li>
-                                        <li className="list-inline-item"><a href="/order">Box</a></li>
-                                        <li className="list-inline-item"><a href="/order">facebook</a></li>
-                                        <li className="list-inline-item"><a href="/order">Flickr</a></li>
+                                        <li className="list-inline-item"><a href="javascript:void(0)">Arbitary links</a></li>
+                                        <li className="list-inline-item"><a href="javascript:void(0)">Url Screenshot</a></li>
+                                        <li className="list-inline-item"><a href="javascript:void(0)">Google Drive</a></li>
+                                        <li className="list-inline-item"><a href="javascript:void(0)">One Drive</a></li>
+                                        <li className="list-inline-item"><a href="javascript:void(0)">Box</a></li>
+                                        <li className="list-inline-item"><a href="javascript:void(0)">facebook</a></li>
+                                        <li className="list-inline-item"><a href="javascript:void(0)">Flickr</a></li>
                                       </ul>
                                     </div>
                                   </div>
@@ -182,7 +191,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                                 <div style={{display: 'none'}} className="library-block">
                                   <h4>Recent Images Library <i className="fa fa-times float-xs-right" data-click-tab=".dropzone" data-click-hide=".library-block" /></h4>
                                   <div className="text-xs-left library-filters">
-                                    <a href="/order" className="d-inline-block"><i className="fa fa-filter" /> <i className="fa fa-th-list" /></a>
+                                    <a href="javascript:void(0)" className="d-inline-block"><i className="fa fa-filter" /> <i className="fa fa-th-list" /></a>
                                     <form action="#" className="d-inline-block">
                                       <div className="input-group">
                                         <input type="text" className="form-control" placeholder="Search" />
@@ -194,7 +203,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                                   </div>
                                   <div className="row">
                                     <div className="col-md-3 col-xs-6">
-                                      <label href="/order" className="library-item">
+                                      <label href="javascript:void(0)" className="library-item">
                                         <img src="img/kim.jpg" alt="#" />
                                         <div className="library-item-header text-xs-left">
                                           <span className="input-span">
@@ -211,7 +220,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                                       </label>
                                     </div>
                                     <div className="col-md-3 col-xs-6">
-                                      <label href="/order" className="library-item">
+                                      <label href="javascript:void(0)" className="library-item">
                                         <img src="img/kim.jpg" alt="#" />
                                         <div className="library-item-header text-xs-left">
                                           <span className="input-span">
@@ -228,7 +237,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                                       </label>
                                     </div>
                                     <div className="col-md-3 col-xs-6">
-                                      <label href="/order" className="library-item">
+                                      <label href="javascript:void(0)" className="library-item">
                                         <img src="img/kim.jpg" alt="#" />
                                         <div className="library-item-header text-xs-left">
                                           <span className="input-span">
@@ -245,7 +254,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                                       </label>
                                     </div>
                                     <div className="col-md-3 col-xs-6">
-                                      <label href="/order" className="library-item">
+                                      <label href="javascript:void(0)" className="library-item">
                                         <img src="img/kim.jpg" alt="#" />
                                         <div className="library-item-header text-xs-left">
                                           <span className="input-span">
@@ -262,7 +271,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                                       </label>
                                     </div>
                                     <div className="col-md-3 col-xs-6">
-                                      <label href="/order" className="library-item">
+                                      <label href="javascript:void(0)" className="library-item">
                                         <img src="img/kim.jpg" alt="#" />
                                         <div className="library-item-header text-xs-left">
                                           <span className="input-span">
@@ -279,7 +288,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                                       </label>
                                     </div>
                                     <div className="col-md-3 col-xs-6">
-                                      <label href="/order" className="library-item">
+                                      <label href="javascript:void(0)" className="library-item">
                                         <img src="img/kim.jpg" alt="#" />
                                         <div className="library-item-header text-xs-left">
                                           <span className="input-span">
@@ -296,7 +305,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                                       </label>
                                     </div>
                                     <div className="col-md-3 col-xs-6">
-                                      <label href="/order" className="library-item">
+                                      <label href="javascript:void(0)" className="library-item">
                                         <img src="img/kim.jpg" alt="#" />
                                         <div className="library-item-header text-xs-left">
                                           <span className="input-span">
@@ -313,7 +322,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                                       </label>
                                     </div>
                                     <div className="col-md-3 col-xs-6">
-                                      <label href="/order" className="library-item">
+                                      <label href="javascript:void(0)" className="library-item">
                                         <img src="img/kim.jpg" alt="#" />
                                         <div className="library-item-header text-xs-left">
                                           <span className="input-span">
@@ -330,7 +339,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                                       </label>
                                     </div>
                                     <div className="col-md-3 col-xs-6">
-                                      <label href="/order" className="library-item">
+                                      <label href="javascript:void(0)" className="library-item">
                                         <img src="img/kim.jpg" alt="#" />
                                         <div className="library-item-header text-xs-left">
                                           <span className="input-span">
@@ -347,7 +356,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                                       </label>
                                     </div>
                                     <div className="col-md-3 col-xs-6">
-                                      <label href="/order" className="library-item">
+                                      <label href="javascript:void(0)" className="library-item">
                                         <img src="img/kim.jpg" alt="#" />
                                         <div className="library-item-header text-xs-left">
                                           <span className="input-span">
@@ -364,7 +373,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                                       </label>
                                     </div>
                                     <div className="col-md-3 col-xs-6">
-                                      <label href="/order" className="library-item">
+                                      <label href="javascript:void(0)" className="library-item">
                                         <img src="img/kim.jpg" alt="#" />
                                         <div className="library-item-header text-xs-left">
                                           <span className="input-span">
@@ -381,7 +390,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                                       </label>
                                     </div>
                                     <div className="col-md-3 col-xs-6">
-                                      <label href="/order" className="library-item">
+                                      <label href="javascript:void(0)" className="library-item">
                                         <img src="img/kim.jpg" alt="#" />
                                         <div className="library-item-header text-xs-left">
                                           <span className="input-span">
@@ -415,22 +424,22 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                               </div>
                             </div>
                             <div className="white-board-sec">
-                              <a href="/order">Add a Whiteboard</a>
+                              <a href="javascript:void(0)">Add a Whiteboard</a>
                             </div>
                             <div className="img-repeat-sec">
                               <ul>
-                                <li><a href="/order"><img src="img/kim.jpg"  alt=""/></a></li>
-                                <li><a href="/order"><img src="img/second-image.png" alt=""/></a></li>
-                                <li><a href="/order"><img src="img/third-image.png" alt="" /></a></li>
-                                <li><a href="/order"><img src="img/fifth-image.png" alt="" /></a></li>
-                                <li><a href="/order"><img src="img/fifth-image.png" alt="" /></a></li>
-                                <li><a href="/order"><img src="img/fifth-image.png" alt="" /></a></li>
-                                <li><a href="/order"><img src="img/fifth-image.png" alt="" /></a></li>
-                                <li><a href="/order"><img src="img/fifth-image.png" alt="" /></a></li>
-                                <li><a href="/order"><img src="img/fifth-image.png" alt="" /></a></li>
+                                <li><a href="javascript:void(0)"><img src="img/kim.jpg"  alt=""/></a></li>
+                                <li><a href="javascript:void(0)"><img src="img/second-image.png" alt=""/></a></li>
+                                <li><a href="javascript:void(0)"><img src="img/third-image.png" alt="" /></a></li>
+                                <li><a href="javascript:void(0)"><img src="img/fifth-image.png" alt="" /></a></li>
+                                <li><a href="javascript:void(0)"><img src="img/fifth-image.png" alt="" /></a></li>
+                                <li><a href="javascript:void(0)"><img src="img/fifth-image.png" alt="" /></a></li>
+                                <li><a href="javascript:void(0)"><img src="img/fifth-image.png" alt="" /></a></li>
+                                <li><a href="javascript:void(0)"><img src="img/fifth-image.png" alt="" /></a></li>
+                                <li><a href="javascript:void(0)"><img src="img/fifth-image.png" alt="" /></a></li>
                               </ul>
                               <div className="bottom-arrow-fun">
-                                <a href="/order"><i className="fa fa-caret-down" aria-hidden="true" /></a>
+                                <a href="javascript:void(0)"><i className="fa fa-caret-down" aria-hidden="true" /></a>
                               </div>
                             </div>
                           </div>

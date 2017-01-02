@@ -1559,8 +1559,8 @@ top:calc(50% - 9px);
 }
 @media (min-width: 1400px) {
   .attachment-pop-up .modal-lg {
-    width: 60%;
-    max-width: 60%;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
 .attachment-pop-up .modal-body {

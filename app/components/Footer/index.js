@@ -46,21 +46,21 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
             <div className="row">
               <div className="col-md-4">
                 <ul className="list-inline">
-                  <li><a href="/order"><img src="/public/img/fb-icon.png" alt="#" /></a></li>
-                  <li><a href="/order"><img src="/public/img/tw-icon.png" alt="#" /></a></li>
-                  <li><a href="/order"><img src="/public/img/g-plus-icon.png" alt="#" /></a></li>
-                  <li><a href="/order"><img src="/public/img/pin-icon.png" alt="#" /></a></li>
-                  <li><a href="/order"><img src="/public/img/blog-icon.png" alt="#" /></a></li>
-                  <li><a href="/order"><img src="/public/img/yt-icon.png" alt="#" /></a></li>
-                  <li><a href="/order"><img src="/public/img/rss-icon.png" alt="#" /></a></li>
-                  <li><a href="/order"><img src="/public/img/lk-icon.png" alt="#" /></a></li>
+                  <li><a href="javascript:void(0)"><img src="/public/img/fb-icon.png" alt="#" /></a></li>
+                  <li><a href="javascript:void(0)"><img src="/public/img/tw-icon.png" alt="#" /></a></li>
+                  <li><a href="javascript:void(0)"><img src="/public/img/g-plus-icon.png" alt="#" /></a></li>
+                  <li><a href="javascript:void(0)"><img src="/public/img/pin-icon.png" alt="#" /></a></li>
+                  <li><a href="javascript:void(0)"><img src="/public/img/blog-icon.png" alt="#" /></a></li>
+                  <li><a href="javascript:void(0)"><img src="/public/img/yt-icon.png" alt="#" /></a></li>
+                  <li><a href="javascript:void(0)"><img src="/public/img/rss-icon.png" alt="#" /></a></li>
+                  <li><a href="javascript:void(0)"><img src="/public/img/lk-icon.png" alt="#" /></a></li>
                 </ul>
               </div>
               <div className="col-md-3">
                 <ul className="list-inline text-xs-center text-bottom-list">
-                  <li><a href="/order">About Us</a></li>
-                  <li><a href="/order">Terms and Conditions</a></li>
-                  <li><a href="/order">Privacy Policy</a></li>
+                  <li><a href="javascript:void(0)">About Us</a></li>
+                  <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+                  <li><a href="javascript:void(0)">Privacy Policy</a></li>
                 </ul>
               </div>
               <div className="col-md-5">
@@ -77,7 +77,7 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
             </div>
           </div>
         </div>
-        <a href="/order" id="back-to-top"><i className="fa fa-arrow-up" aria-hidden="true" /></a>
+        <a href="javascript:void(0)" id="back-to-top"><i className="fa fa-arrow-up" aria-hidden="true" /></a>
       </div>
     );
   }
