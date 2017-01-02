@@ -1,7 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Editor from '../../components/Editor/index';
+import DropzoneComponent from 'react-dropzone-component';
 
+var componentConfig = {
+  iconFiletypes: ['.jpg', '.png', '.gif'],
+  showFiletypeIcon: true,
+  postUrl: '/uploadHandler'
+};
+var djsConfig = {  };
+var eventHandlers = { addedfile: (file) => console.log(file) };
 
 export class OrderBody extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(){

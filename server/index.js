@@ -10,11 +10,14 @@ const ngrok = (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel ? require('ngr
 const resolve = require('path').resolve;
 const app = express();
 const path = require('path');
+const MulterImpl  = require('./uploader/multerImpl');
 app.use('/public', express.static(path.join(__dirname, './../app/assets')));
 
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi);
 
+//Uplloader Calling
+require('./uploader/multerImpl')(app); 
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {
   outputPath: resolve(process.cwd(), 'build'),
