@@ -15,11 +15,11 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
   constructor(){
     super();
     this.state = {
-      popState:true
+      popState:false
     }
   }
   openClick(e){
-    this.setState({popState:this.state.popState});
+    this.setState({popState:true});
   }
   render() {
     return (
@@ -35,9 +35,9 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
                   <div className>
                     <a className="nav-link dropdown-toggle waves-effect waves-light" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i className="fa fa-paperclip" aria-hidden="true" />Add Attachment</a>
                     <div className="dropdown-menu dropdown-default for-attachment-only" aria-labelledby="dropdownMenu2" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
-                      <a className="dropdown-item waves-effect waves-light" href="#"><i className="fa fa-hdd-o" aria-hidden="true" />Upload by drive</a>
-                      <a className="dropdown-item waves-effect waves-light" href="#"><i className="fa fa-server" aria-hidden="true" />Upload by library</a>
-                      <a className="dropdown-item waves-effect waves-light" href="#"><i className="fa fa-stop" aria-hidden="true" />Add whiteboard</a>
+                      <a className="dropdown-item waves-effect waves-light" href="javascript:void(0)"><i className="fa fa-hdd-o" aria-hidden="true" />Upload by drive</a>
+                      <a className="dropdown-item waves-effect waves-light" href="javascript:void(0)"><i className="fa fa-server" aria-hidden="true" />Upload by library</a>
+                      <a className="dropdown-item waves-effect waves-light" href="javascript:void(0)"><i className="fa fa-stop" aria-hidden="true" />Add whiteboard</a>
                     </div>
                   </div>
                 </div>

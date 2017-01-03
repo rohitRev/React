@@ -32,7 +32,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
   };
   componentWillReceiveProps(nextProps)
   {
-    this.handleOpen();
+    this.setState({open: nextProps.popState});
   }
   render() {
     const actions = [
