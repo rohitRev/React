@@ -1,11 +1,11 @@
 /**
-*
-* Editor
-*
-*/
+ *
+ * Editor
+ *
+ */
 
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -17,12 +17,14 @@ const customContentStyle = {
 };
 
 class Editor extends React.Component { // eslint-disable-line react/prefer-stateless-function
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       open: false,
+      previewImage:''
     };
   }
+
   handleOpen = () => {
     this.setState({open: true});
   };
@@ -30,10 +32,12 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
   handleClose = () => {
     this.setState({open: false});
   };
-  componentWillReceiveProps(nextProps)
-  {
+
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
     this.setState({open: nextProps.popState});
   }
+
   render() {
     const actions = [
       <FlatButton
@@ -52,7 +56,7 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
       <MuiThemeProvider>
         <div>
           <Dialog contentStyle={customContentStyle} actions={actions} modal={true} open={this.state.open}>
-            <div className="attachment-pop-up" id="attachment-pop-up">
+            <div className="attachment-pop-up" id="attachment-pop-up1" tabIndex={-1}>
               <div className="modal-dialog modal-lg" role="document">
                 <div className="modal-content">
                   <div className="modal-body">
@@ -61,13 +65,13 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                         <div className="top-fil-list">
                           <h4>Add Images &amp; Markup</h4>
                           <ul className="disabled">
-                            <a href="javascript:void(0)" className="ok-btn-a"><i className="fa fa-check" /></a>
-                            <li>
+                            <a href="#" className="ok-btn-a" data-dismiss="modal" aria-label="Close"><i className="fa fa-check" /></a>
+                            <li className="hide-s">
                               <div className="filter-markup">
                                 <i className="fa fa-arrow-left" aria-hidden="true" />
                               </div>
                             </li>
-                            <li>
+                            <li className="hide-s">
                               <div className="filter-markup">
                                 <i className="fa fa-arrow-right" aria-hidden="true" />
                               </div>
@@ -80,366 +84,233 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                             <li className="drop-down">
                               <div className="filter-markup">
                                 <i className="fa fa-undo" aria-hidden="true" />
+                                <span>&nbsp;</span>
                               </div>
                               <div className="pop-hover-color rotate-sec">
                                 <div className="common-div-s no-hover">
-                                  <a href="javascript:void(0)">Rotate 90o<i className="fa fa-undo" aria-hidden="true" /></a>
-                                  <a href="javascript:void(0)">
-                                    <span>Straighten</span>
-                                    <input type="range" name="straighten" className="active" />
-                                    <span className="thumb active" style={{display: 'none', left: '60.5313px', height: 30, width: 30, top: '-20px', marginLeft: '-15px'}}>
-                                          <span className="value">62</span></span>
-                                  </a>
+                                  <a href="#">Rotate 90o<i className="fa fa-undo" aria-hidden="true" /></a>
+                                  <a href="#"><span>Straighten</span><input type="range" name="straighten" className="active" /><span className="thumb active"><span className="value">62</span></span></a>
                                 </div>
                               </div>
                             </li>
                             <li className="drop-down">
                               <div className="filter-markup">
                                 <i className="fa fa-red-circle" aria-hidden="true" />
+                                <span>&nbsp;</span>
                               </div>
                               <div className="pop-hover-color">
                                 <div className="common-div-s active">
-                                  <a href="javascript:void(0)" className="pink-color" />
+                                  <a href="#" className="pink-color" />
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="javascript:void(0)" className="yellow-color" />
+                                  <a href="#" className="yellow-color" />
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="javascript:void(0)" className="black-color" />
+                                  <a href="#" className="black-color" />
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="javascript:void(0)" className="blue-color" />
+                                  <a href="#" className="blue-color" />
                                 </div>
                               </div>
                             </li>
                             <li className="drop-down">
                               <div className="filter-markup">
                                 <i className="fa fa-line-box" aria-hidden="true" />
+                                <span>&nbsp;</span>
                               </div>
                               <div className="pop-hover-color">
                                 <div className="common-div-s no-hover">
-                                  <input type="range" />
-                                  <span className="thumb">
-                                    <span className="value" />
-                                  </span>
+                                  <input type="range" /><span className="thumb"><span className="value" /></span>
                                 </div>
                               </div>
                             </li>
                             <li className="drop-down">
                               <div className="filter-markup">
                                 <i className="fa fa-left-bottom" aria-hidden="true" />
+                                <span>&nbsp;</span>
                               </div>
                               <div className="pop-hover-color crop-tools">
                                 <div className="common-div-s active">
-                                  <a href="javascript:void(0)"><img src="img/line-left.png" alt="" /></a>
+                                  <a href="#"><img src="img/line-left.png" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="javascript:void(0)"><img src="img/box-line.png" alt="" /></a>
+                                  <a href="#"><img src="img/box-line.png" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="javascript:void(0)"><img src="img/rectangle.png" alt="" /></a>
+                                  <a href="#"><img src="img/rectangle.png" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="javascript:void(0)"><img src="img/circle.png" alt="" /></a>
+                                  <a href="#"><img src="img/circle.png" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="javascript:void(0)"><img src="img/line-icon.png" alt="" /></a>
+                                  <a href="#"><img src="img/line-icon.png" /></a>
                                 </div>
                                 <div className="common-div-s">
-                                  <a href="javascript:void(0)"><img src="img/pen-icon.png" alt="" /></a>
+                                  <a href="#"><img src="img/pen-icon.png" /></a>
                                 </div>
                               </div>
                             </li>
-                            <li className="drop-down no-arrow">
+                            <li className="drop-down">
                               <div className="filter-markup">
                                 <i className="fa fa-text" aria-hidden="true" />
+                                <span>&nbsp;</span>
+                              </div>
+                              <div className="pop-hover-color rotate-sec">
+                                <div className="common-div-s no-hover">
+                                  <a href="#"><i className="fa fa-list-ol" aria-hidden="true" /> Text Numbering</a>
+                                  <a href="#"><i className="fa fa-text-width" aria-hidden="true" /> A | Free Hand text</a>
+                                </div>
                               </div>
                             </li>
-                            <li className="drop-down no-arrow" data-toggle="modal" data-target="#quick-look-ex">
+                            <li className="drop-down">
                               <div className="filter-markup">
                                 <i className="fa fa-attach" aria-hidden="true" />
+                                <span>&nbsp;</span>
+                              </div>
+                              <div className="pop-hover-color crop-tools attach-f">
+                                <div className="common-div-s active">
+                                  <a href="#">Main cover</a>
+                                </div>
+                                <div className="common-div-s">
+                                  <a href="#">Reference</a>
+                                </div>
+                                <div className="common-div-s">
+                                  <a href="#">Other</a>
+                                </div>
                               </div>
                             </li>
+                            {/*
+                            <li><i class="fa fa-search-plus" aria-hidden="true"></i><a href="#"><i class="fa fa-plus-square" aria-hidden="true"></i></a><a href="#"><i class="fa fa-minus-square" aria-hidden="true"></i></a></li> */}
                           </ul>
+                          <div className="dropdown cust-dd-height">
+                            {/*Trigger*/}
+                            <button className="btn btn-primary dropdown-toggle waves-effect waves-light mbl-h-btns" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fa fa-arrows" aria-hidden="true" /></button> {/*Menu*/}
+                            <div className="dropdown-menu dropdown-primary" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                              <li className>
+                                <form className="form-inline-fields">
+                                  <button className="btn btn-primary mbl-h-btns-desktop hide-tabs"><i className="fa fa-search-plus" aria-hidden="true" /></button>
+                                  <button className="btn btn-primary mbl-h-btns-desktop hide-tabs"><i className="fa fa-search-minus" aria-hidden="true" /></button>
+                                  <div className="md-form">
+                                    <span className="label-fixed"><span className="badge-round">W</span></span>
+                                    <input type="text" className="form-control" placeholder="3.25" />
+                                  </div>
+                                  <div className="md-form">
+                                    <span className="label-fixed"><span className="badge-round">H</span></span>
+                                    <input type="text" className="form-control" placeholder="3.25" />
+                                  </div>
+                                  <button className="btn btn-primary mbl-h-btns-desktop"><i className="fa fa-lock" aria-hidden="true" /></button>
+                                  <div className="md-form">
+                                    <select className="browser-default">
+                                      <option value={1}>In</option>
+                                      <option value={2}>cm</option>
+                                      <option value={3}>mm</option>
+                                    </select>
+                                  </div>
+                                  <button className="btn btn-primary mbl-h-btns-desktop"><i className="fa fa-check" aria-hidden="true" /></button>
+                                  <button className="btn btn-primary mbl-h-btns-desktop hide-tabs"><i className="fa fa-trash" aria-hidden="true" /></button>
+                                </form>
+                              </li>
+                            </div>
+                          </div>
+                          <div className="clearfix" />
+                          <p className="zoom-icons"><i className="fa fa-search-plus" aria-hidden="true" /></p>
+                          <p className="zoom-icons"><i className="fa fa-search-minus" aria-hidden="true" /></p>
                         </div>
                         <div className="app-bottom-section">
-                          <div className="col-md-9 text-xs-center">
+                          <div className="col-md-10 text-xs-center">
                             <div className="row">
                               <div className="white-board-dev">
-                                <form action="/file-upload" className="dropzone" id="pop-drop">
-                                  <div className="dz-default dz-message">
-                                    <h2 className="hidden-md-down">Drop a file here</h2>
-                                    <span className="or hidden-md-down">or</span>
-                                    <span className="btn btn-primary">Choose a local file</span>
-                                    <div className="extra-link-block">
-                                      <span>You can also choose it from</span>
-                                      <ul className="list-inline list-click-able">
-                                        <li className="list-inline-item"><a href="javascript:void(0)">Arbitary links</a></li>
-                                        <li className="list-inline-item"><a href="javascript:void(0)">Url Screenshot</a></li>
-                                        <li className="list-inline-item"><a href="javascript:void(0)">Google Drive</a></li>
-                                        <li className="list-inline-item"><a href="javascript:void(0)">One Drive</a></li>
-                                        <li className="list-inline-item"><a href="javascript:void(0)">Box</a></li>
-                                        <li className="list-inline-item"><a href="javascript:void(0)">facebook</a></li>
-                                        <li className="list-inline-item"><a href="javascript:void(0)">Flickr</a></li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                  <div className="fallback">
-                                    <input name="file" type="file" />
-                                  </div>
-                                </form>
-                                <div style={{display: 'none'}} className="library-block">
-                                  <h4>Recent Images Library <i className="fa fa-times float-xs-right" data-click-tab=".dropzone" data-click-hide=".library-block" /></h4>
-                                  <div className="text-xs-left library-filters">
-                                    <a href="javascript:void(0)" className="d-inline-block"><i className="fa fa-filter" /> <i className="fa fa-th-list" /></a>
-                                    <form action="#" className="d-inline-block">
-                                      <div className="input-group">
-                                        <input type="text" className="form-control" placeholder="Search" />
-                                        <span className="input-group-btn">
-                                          <button className="btn" type="button"><i className="fa fa-search" /></button>
-                                        </span>
-                                      </div>
-                                    </form>
-                                  </div>
-                                  <div className="row">
-                                    <div className="col-md-3 col-xs-6">
-                                      <label href="javascript:void(0)" className="library-item">
-                                        <img src="img/kim.jpg" alt="#" />
-                                        <div className="library-item-header text-xs-left">
-                                          <span className="input-span">
-                                            <input type="checkbox" name id className="filled-in" />
-                                            <label htmlFor="checkbox1" /></span>
-                                          <span className="float-xs-right text-xs-right">
-                                            <span> Today at 2:21 PM  <br /> @johndoe</span>
-                                          </span>
-                                        </div>
-                                        <div className="library-item-footer text-xs-left">
-                                          <span>first name</span>
-                                          <span className="float-xs-right">Main tag</span>
-                                        </div>
-                                      </label>
-                                    </div>
-                                    <div className="col-md-3 col-xs-6">
-                                      <label href="javascript:void(0)" className="library-item">
-                                        <img src="img/kim.jpg" alt="#" />
-                                        <div className="library-item-header text-xs-left">
-                                          <span className="input-span">
-                                            <input type="checkbox" name id className="filled-in" />
-                                            <label htmlFor="checkbox1" /></span>
-                                          <span className="float-xs-right text-xs-right">
-                                            <span> Today at 2:21 PM  <br /> @johndoe</span>
-                                          </span>
-                                        </div>
-                                        <div className="library-item-footer text-xs-left">
-                                          <span>first name</span>
-                                          <span className="float-xs-right">Main tag</span>
-                                        </div>
-                                      </label>
-                                    </div>
-                                    <div className="col-md-3 col-xs-6">
-                                      <label href="javascript:void(0)" className="library-item">
-                                        <img src="img/kim.jpg" alt="#" />
-                                        <div className="library-item-header text-xs-left">
-                                          <span className="input-span">
-                                            <input type="checkbox" name id className="filled-in" />
-                                            <label htmlFor="checkbox1" /></span>
-                                          <span className="float-xs-right text-xs-right">
-                                            <span> Today at 2:21 PM  <br /> @johndoe</span>
-                                          </span>
-                                        </div>
-                                        <div className="library-item-footer text-xs-left">
-                                          <span>first name</span>
-                                          <span className="float-xs-right">Main tag</span>
-                                        </div>
-                                      </label>
-                                    </div>
-                                    <div className="col-md-3 col-xs-6">
-                                      <label href="javascript:void(0)" className="library-item">
-                                        <img src="img/kim.jpg" alt="#" />
-                                        <div className="library-item-header text-xs-left">
-                                          <span className="input-span">
-                                            <input type="checkbox" name id className="filled-in" />
-                                            <label htmlFor="checkbox1" /></span>
-                                          <span className="float-xs-right text-xs-right">
-                                            <span> Today at 2:21 PM  <br /> @johndoe</span>
-                                          </span>
-                                        </div>
-                                        <div className="library-item-footer text-xs-left">
-                                          <span>first name</span>
-                                          <span className="float-xs-right">Main tag</span>
-                                        </div>
-                                      </label>
-                                    </div>
-                                    <div className="col-md-3 col-xs-6">
-                                      <label href="javascript:void(0)" className="library-item">
-                                        <img src="img/kim.jpg" alt="#" />
-                                        <div className="library-item-header text-xs-left">
-                                          <span className="input-span">
-                                            <input type="checkbox" name id className="filled-in" />
-                                            <label htmlFor="checkbox1" /></span>
-                                          <span className="float-xs-right text-xs-right">
-                                            <span> Today at 2:21 PM  <br /> @johndoe</span>
-                                          </span>
-                                        </div>
-                                        <div className="library-item-footer text-xs-left">
-                                          <span>first name</span>
-                                          <span className="float-xs-right">Main tag</span>
-                                        </div>
-                                      </label>
-                                    </div>
-                                    <div className="col-md-3 col-xs-6">
-                                      <label href="javascript:void(0)" className="library-item">
-                                        <img src="img/kim.jpg" alt="#" />
-                                        <div className="library-item-header text-xs-left">
-                                          <span className="input-span">
-                                            <input type="checkbox" name id className="filled-in" />
-                                            <label htmlFor="checkbox1" /></span>
-                                          <span className="float-xs-right text-xs-right">
-                                            <span> Today at 2:21 PM  <br /> @johndoe</span>
-                                          </span>
-                                        </div>
-                                        <div className="library-item-footer text-xs-left">
-                                          <span>first name</span>
-                                          <span className="float-xs-right">Main tag</span>
-                                        </div>
-                                      </label>
-                                    </div>
-                                    <div className="col-md-3 col-xs-6">
-                                      <label href="javascript:void(0)" className="library-item">
-                                        <img src="img/kim.jpg" alt="#" />
-                                        <div className="library-item-header text-xs-left">
-                                          <span className="input-span">
-                                            <input type="checkbox" name id className="filled-in" />
-                                            <label htmlFor="checkbox1" /></span>
-                                          <span className="float-xs-right text-xs-right">
-                                            <span> Today at 2:21 PM  <br /> @johndoe</span>
-                                          </span>
-                                        </div>
-                                        <div className="library-item-footer text-xs-left">
-                                          <span>first name</span>
-                                          <span className="float-xs-right">Main tag</span>
-                                        </div>
-                                      </label>
-                                    </div>
-                                    <div className="col-md-3 col-xs-6">
-                                      <label href="javascript:void(0)" className="library-item">
-                                        <img src="img/kim.jpg" alt="#" />
-                                        <div className="library-item-header text-xs-left">
-                                          <span className="input-span">
-                                            <input type="checkbox" name id className="filled-in" />
-                                            <label htmlFor="checkbox1" /></span>
-                                          <span className="float-xs-right text-xs-right">
-                                            <span> Today at 2:21 PM  <br /> @johndoe</span>
-                                          </span>
-                                        </div>
-                                        <div className="library-item-footer text-xs-left">
-                                          <span>first name</span>
-                                          <span className="float-xs-right">Main tag</span>
-                                        </div>
-                                      </label>
-                                    </div>
-                                    <div className="col-md-3 col-xs-6">
-                                      <label href="javascript:void(0)" className="library-item">
-                                        <img src="img/kim.jpg" alt="#" />
-                                        <div className="library-item-header text-xs-left">
-                                          <span className="input-span">
-                                            <input type="checkbox" name id className="filled-in" />
-                                            <label htmlFor="checkbox1" /></span>
-                                          <span className="float-xs-right text-xs-right">
-                                            <span> Today at 2:21 PM  <br /> @johndoe</span>
-                                          </span>
-                                        </div>
-                                        <div className="library-item-footer text-xs-left">
-                                          <span>first name</span>
-                                          <span className="float-xs-right">Main tag</span>
-                                        </div>
-                                      </label>
-                                    </div>
-                                    <div className="col-md-3 col-xs-6">
-                                      <label href="javascript:void(0)" className="library-item">
-                                        <img src="img/kim.jpg" alt="#" />
-                                        <div className="library-item-header text-xs-left">
-                                          <span className="input-span">
-                                            <input type="checkbox" name id className="filled-in" />
-                                            <label htmlFor="checkbox1" /></span>
-                                          <span className="float-xs-right text-xs-right">
-                                            <span> Today at 2:21 PM  <br /> @johndoe</span>
-                                          </span>
-                                        </div>
-                                        <div className="library-item-footer text-xs-left">
-                                          <span>first name</span>
-                                          <span className="float-xs-right">Main tag</span>
-                                        </div>
-                                      </label>
-                                    </div>
-                                    <div className="col-md-3 col-xs-6">
-                                      <label href="javascript:void(0)" className="library-item">
-                                        <img src="img/kim.jpg" alt="#" />
-                                        <div className="library-item-header text-xs-left">
-                                          <span className="input-span">
-                                            <input type="checkbox" name id className="filled-in" />
-                                            <label htmlFor="checkbox1" /></span>
-                                          <span className="float-xs-right text-xs-right">
-                                            <span> Today at 2:21 PM  <br /> @johndoe</span>
-                                          </span>
-                                        </div>
-                                        <div className="library-item-footer text-xs-left">
-                                          <span>first name</span>
-                                          <span className="float-xs-right">Main tag</span>
-                                        </div>
-                                      </label>
-                                    </div>
-                                    <div className="col-md-3 col-xs-6">
-                                      <label href="javascript:void(0)" className="library-item">
-                                        <img src="img/kim.jpg" alt="#" />
-                                        <div className="library-item-header text-xs-left">
-                                          <span className="input-span">
-                                            <input type="checkbox" name id className="filled-in" />
-                                            <label htmlFor="checkbox1" /></span>
-                                          <span className="float-xs-right text-xs-right">
-                                            <span> Today at 2:21 PM  <br /> @johndoe</span>
-                                          </span>
-                                        </div>
-                                        <div className="library-item-footer text-xs-left">
-                                          <span>first name</span>
-                                          <span className="float-xs-right">Main tag</span>
-                                        </div>
-                                      </label>
-                                    </div>
-                                  </div>
-                                </div>
+                                { <img src={this.props.previewImage} alt='editImage' />}
                               </div>
                             </div>
                           </div>
-                          <div className="col-md-3 right-side-section">
+                          <div className="mbl-tools-del text-xs-center">
+                            <ul>
+                              <li>
+                                <a href="#"><i className="fa fa-reply" aria-hidden="true" /></a>
+                                <a href="#"><i className="fa fa-trash" aria-hidden="true" /></a>
+                                <a href="#"><i className="fa fa-reply f-flip" aria-hidden="true" /></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="col-md-2 right-side-section">
                             <div className="upload-lib upload-attachment-side-link  ">
-                              <div className="upload-new-sec" data-toggle="modal" data-target="#quick-look-ex">
+                              <div className="upload-new-sec">
                                 <i className="fa fa-cloud-upload" aria-hidden="true" /><br />
-                                Attach New
+                                <a className="nav-link dropdown-toggle waves-effect waves-light" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Attach New</a>
+                                <div className="dropdown-menu dropdown-default for-dropdown-attachment" aria-labelledby="dropdownMenu2" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                  <ul>
+                                    <li>
+                                      <a href="#"><i className="fa fa-desktop" aria-hidden="true" /> Computer</a>
+                                    </li>
+                                    <li>
+                                      <a href="#"><i className="fa fa-dropbox" aria-hidden="true" /> Dropbox</a>
+                                    </li>
+                                    <li>
+                                      <a href="#"><i className="fa fa-drive" aria-hidden="true" /> Google Drive</a>
+                                    </li>
+                                    <li>
+                                      <a href="#"><i className="fa fa-cloud-download" aria-hidden="true" /> One drive</a>
+                                    </li>
+                                    <li>
+                                      <a href="#"><i className="fa fa-box" aria-hidden="true" /> Box</a>
+                                    </li>
+                                    <li>
+                                      <a href="#"><i className="fa fa-facebook-square" aria-hidden="true" /> Facebook</a>
+                                    </li>
+                                    <li>
+                                      <a href="#"><i className="fa fa-flickr" aria-hidden="true" /> Flickr</a>
+                                    </li>
+                                  </ul>
+                                  <div className="modal-footer">
+                                    <div className="md-form">
+                                      <i className="fa fa-link prefix active" aria-hidden="true" />
+                                      <input type="email" id="form9" className="form-control validate" placeholder="Paste url to capture from web..." />
+                                    </div>
+                                    <button type="button" className="btn btn-amber waves-effect waves-light">Capture</button>
+                                  </div>
+                                </div>
                               </div>
                               <div className="upload-new-sec" data-click-tab=".library-block" data-click-hide=".dropzone">
-                                <input type="file" name="library-new" />
-                                <i className="fa fa-hdd-o" aria-hidden="true" /><br />
-                                Library
+                                {/* <input type="file" name="library-new"> */}
+                                <i className="fa fa-hdd-o" aria-hidden="true" /><br /> Library
                               </div>
                             </div>
                             <div className="white-board-sec">
-                              <a href="javascript:void(0)">Add a Whiteboard</a>
+                              <a href="#">Add a Whiteboard</a>
                             </div>
                             <div className="img-repeat-sec">
                               <ul>
-                                <li><a href="javascript:void(0)"><img src="img/kim.jpg"  alt=""/></a></li>
-                                <li><a href="javascript:void(0)"><img src="img/second-image.png" alt=""/></a></li>
-                                <li><a href="javascript:void(0)"><img src="img/third-image.png" alt="" /></a></li>
-                                <li><a href="javascript:void(0)"><img src="img/fifth-image.png" alt="" /></a></li>
-                                <li><a href="javascript:void(0)"><img src="img/fifth-image.png" alt="" /></a></li>
-                                <li><a href="javascript:void(0)"><img src="img/fifth-image.png" alt="" /></a></li>
-                                <li><a href="javascript:void(0)"><img src="img/fifth-image.png" alt="" /></a></li>
-                                <li><a href="javascript:void(0)"><img src="img/fifth-image.png" alt="" /></a></li>
-                                <li><a href="javascript:void(0)"><img src="img/fifth-image.png" alt="" /></a></li>
+                                <li>
+                                  <a href="#"><img src="img/kim.jpg" /></a>
+                                </li>
+                                <li>
+                                  <a href="#"><img src="img/second-image.png" /></a>
+                                </li>
+                                <li>
+                                  <a href="#"><img src="img/third-image.png" /></a>
+                                </li>
+                                <li>
+                                  <a href="#"><img src="img/fifth-image.png" /></a>
+                                </li>
+                                <li>
+                                  <a href="#"><img src="img/fifth-image.png" /></a>
+                                </li>
+                                <li>
+                                  <a href="#"><img src="img/fifth-image.png" /></a>
+                                </li>
+                                <li>
+                                  <a href="#"><img src="img/fifth-image.png" /></a>
+                                </li>
+                                <li>
+                                  <a href="#"><img src="img/fifth-image.png" /></a>
+                                </li>
+                                <li>
+                                  <a href="#"><img src="img/fifth-image.png" /></a>
+                                </li>
                               </ul>
                               <div className="bottom-arrow-fun">
-                                <a href="javascript:void(0)"><i className="fa fa-caret-down" aria-hidden="true" /></a>
+                                <a href="#"><i className="fa fa-caret-down" aria-hidden="true" /></a>
                               </div>
                             </div>
                           </div>

@@ -1,22 +1,29 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Editor from '../../components/Editor/index';
+import DropZone from '../../components/Editor/dropzone';
+import DropzoneComponent from 'react-dropzone-component';
+import ReactDOMServer from 'react-dom/server';
 
 export class OrderBody extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(){
     super();
     this.state = {
-      popState:false
+      popState:false,
+      imageToEdit:false
     }
   }
   openClick(e){
     this.setState({popState:true});
   }
+  ImageToEditor(image){
+    this.setState({imageToEdit:image});
+  }
+
   render() {
     return (
       <div className="order-page-bg">
-        <Editor popState={this.state.popState}/>
-        <button onClick={this.openClick.bind(this)}>OpenPop</button>
+        <Editor popState={this.state.popState} previewImage={this.state.imageToEdit}  />
         <div className="container container-sm">
           <div className="order-page-block">
             <h1 className="order-heading text-xs-center">New Custom Embroidery Digitizing Order Form</h1>
@@ -36,22 +43,7 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
               </form>
               <div className="slider-container upload-container hidden-sm-down">
                 <form action="/file-upload" className="dropzone dz-clickable">
-                  <div className="dz-default dz-message">
-                    <strong data-action="owl-prev-btn" aria-hidden="true">Or</strong>
-                    <i className="fa fa-cloud-upload main-icon" aria-hidden="true"></i>
-                    <h2>Drag n Drop</h2>
-                    <h3>your Images here &amp; you can markup images too.</h3>
-                    <ul className="list-inline upload-links">
-                      <li className="list-inline-item"><a href="javascript:void(0)"><i className="fa fa-upload"></i></a></li>
-                      <li className="list-inline-item"><a href="javascript:void(0)"><i className="fa fa-dropbox"></i></a></li>
-                    <li className="list-inline-item"><a href="javascript:void(0)"><img src="/public/img/g-drive.svg" alt="" /></a></li>
-                      <li className="list-inline-item"><a href="javascript:void(0)"><i className="fa fa-cloud-download" aria-hidden="true"></i></a></li>
-                      <li className="list-inline-item"><a href="javascript:void(0)"><img src="/public/img/box-logo.svg" alt="" /></a></li>
-                      <li className="list-inline-item"><a href="javascript:void(0)"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
-                      <li className="list-inline-item"><a href="javascript:void(0)"><i className="fa fa-external-link" aria-hidden="true"></i></a></li>
-                      <li className="list-inline-item"><a href="javascript:void(0)"><i className="fa fa-book" aria-hidden="true"></i></a></li>
-                    </ul>
-                  </div>
+                  <DropZone open={this.openClick.bind(this)} imageEdit={this.ImageToEditor.bind(this)} />
                 </form>
               </div>
             </div>
@@ -390,6 +382,15 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
 
     );
   }
+  componentDidMount(){
+    /*var ths = this;
+    $(document).ready(function(){
+      $(document).on('click','.dz-details',function(e){
+        ths.openClick(e);
+      })
+    })*/
+  }
 }
+
 
 export default OrderBody;
