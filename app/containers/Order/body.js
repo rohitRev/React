@@ -19,6 +19,9 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
   ImageToEditor(image){
     this.setState({imageToEdit:image});
   }
+  whiteBoard(){
+    this.setState({popState:true,imageToEdit:''});
+  }
 
   render() {
     return (
@@ -35,7 +38,7 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
                     <div className="dropdown-menu dropdown-default for-attachment-only" aria-labelledby="dropdownMenu2" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                       <a className="dropdown-item waves-effect waves-light" href="javascript:void(0)"><i className="fa fa-hdd-o" aria-hidden="true" />Upload by drive</a>
                       <a className="dropdown-item waves-effect waves-light" href="javascript:void(0)"><i className="fa fa-server" aria-hidden="true" />Upload by library</a>
-                      <a className="dropdown-item waves-effect waves-light" href="javascript:void(0)"><i className="fa fa-stop" aria-hidden="true" />Add whiteboard</a>
+                      <a className="dropdown-item waves-effect waves-light" onClick={this.whiteBoard.bind(this)} href={void(0)}><i className="fa fa-stop" aria-hidden="true" />Add whiteboard</a>
                     </div>
                   </div>
                 </div>
@@ -224,9 +227,6 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
                       </div>
 
                       <div className="block">
-
-
-
                         <span className="heading-block">Do you want customized mockup of your Digitized Design?</span>
                         <div className="clearfix"></div>
                         <div className="row-half row">

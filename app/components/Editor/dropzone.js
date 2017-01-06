@@ -15,7 +15,7 @@ class DropZone extends React.Component {
             acceptedFiles: "image/jpeg,image/png,image/gif",
             dictDefaultMessage:"",
             previewTemplate: ReactDOMServer.renderToStaticMarkup(
-              <div onClick={(e)=>alert(0)} className="dz-preview asdf dz-processing dz-success dz-complete dz-image-preview">
+              <div className="dz-preview asdf dz-processing dz-success dz-complete dz-image-preview">
                 <div  className="dz-image">
                   <img data-dz-thumbnail="" alt="" src="" />
                 </div>

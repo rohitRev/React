@@ -220,7 +220,13 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
                           <div className="col-md-10 text-xs-center">
                             <div className="row">
                               <div className="white-board-dev">
-                                { <img src={this.props.previewImage} alt='editImage' />}
+                                {
+                                  (this.props.previewImage!="")
+                                  ?
+                                    <img src={this.props.previewImage} alt='editImage' />
+                                  :
+                                   <canvas></canvas>
+                                }
                               </div>
                             </div>
                           </div>
