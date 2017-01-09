@@ -1,9 +1,9 @@
 /**
-* app.js
-*
-* This is the entry file for the application, only setup and boilerplate
-* code.
-*/
+ * app.js
+ *
+ * This is the entry file for the application, only setup and boilerplate
+ * code.
+ */
 
 // Needed for redux-saga es6 generator support
 import 'babel-polyfill';
@@ -31,7 +31,7 @@ import LanguageProvider from 'containers/LanguageProvider';
 
 // Import CSS reset and Global Styles
 /*  import 'sanitize.css/sanitize.css';
-import './global-styles';*/
+ import './global-styles';*/
 
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
 // the index.html file and this observer)
@@ -76,14 +76,14 @@ const render = (messages) => {
     <Provider store={store}>
       <LanguageProvider messages={messages}>
         <Router
-    history={history}
-    routes={rootRoute}
-    render={
-    // Scroll to top when going to a new page, imitating default browser
-    // behaviour
-    applyRouterMiddleware(useScroll())
-    }
-    />
+          history={history}
+          routes={rootRoute}
+          render={
+            // Scroll to top when going to a new page, imitating default browser
+            // behaviour
+            applyRouterMiddleware(useScroll())
+          }
+        />
       </LanguageProvider>
     </Provider>,
     document.getElementById('app')

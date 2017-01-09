@@ -19,8 +19,15 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
     super(props);
     this.state = {
       open: false,
-      previewImage: ''
+      previewImage: '',
     };
+  }
+
+
+
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({open: nextProps.popState});
   }
 
   handleOpen = () => {
@@ -30,11 +37,6 @@ class Editor extends React.Component { // eslint-disable-line react/prefer-state
   handleClose = () => {
     this.setState({open: false});
   };
-
-  componentWillReceiveProps(nextProps) {
-    this.setState({open: nextProps.popState});
-  }
-
   render() {
     const actions = [
       <FlatButton
