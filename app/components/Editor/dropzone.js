@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import ReactDOMServer from 'react-dom/server';
 import DropzoneComponent from 'react-dropzone-component';
 
