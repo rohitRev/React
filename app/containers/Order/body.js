@@ -31,7 +31,7 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
   render() {
     return (
       <div className="order-page-bg">
-        <Editor popState={ this.state.popState } previewImage={ this.state.imageToEdit } />
+        <Editor popState={ this.state.popState } previewImage={ this.state.imageToEdit }/>
         <div className="container container-sm">
           <div className="order-page-block">
             <h1 className="order-heading text-xs-center">New Custom Embroidery Digitizing Order Form</h1>
@@ -304,14 +304,14 @@ export class OrderBody extends React.Component { // eslint-disable-line react/pr
                             <option value="3">Option 3</option>
                           </select>
                           <span className="select2 select2-container select2-container--default" dir="ltr" style={{width: "auto"}}>
-                          <span className="selection">
-                          <span className="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabIndex="0" aria-labelledby="select2-9grw-container">
-                          <span className="select2-selection__rendered" id="select2-9grw-container" title="Any">Any</span>
-                          <span className="select2-selection__arrow" role="presentation"><b role="presentation"></b></span>
+                            <span className="selection">
+                              <span className="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabIndex="0" aria-labelledby="select2-9grw-container">
+                                <span className="select2-selection__rendered" id="select2-9grw-container" title="Any">Any</span>
+                                <span className="select2-selection__arrow" role="presentation"><b role="presentation"></b></span>
+                              </span>
+                            </span>
+                            <span className="dropdown-wrapper" aria-hidden="true"></span>
                           </span>
-                        </span>
-                        <span className="dropdown-wrapper" aria-hidden="true"></span>
-                        </span>
                         </div>
                       </div>
 
