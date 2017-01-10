@@ -37,6 +37,14 @@ export default function createRoutes(store) {
       path: 'order',
       name: 'order',
       getComponent(location, cb) {
+        const importModules = Promise.all([
+          System.import('containers/Order/reducer'),
+        ]);
+
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('order', reducer.default);
+
+        });
         System.import('containers/Order')
           .then(loadModule(cb))
           .catch(errorLoading);
